@@ -1,7 +1,7 @@
-import React from 'react';
-
+import { Keys } from './components/keys/Keys';
+import "./App.css"
 const App = () => {
-  return <h1>React-Template</h1>;
+  return <Keys  />;
 };
 
 export default App;
