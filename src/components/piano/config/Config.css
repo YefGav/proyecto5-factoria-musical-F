@@ -1,0 +1,11 @@
+  .config-container {
+    margin-bottom: 20px;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .instrument-config {
+    display: inline-flex;
+    gap: 10px;
+  }

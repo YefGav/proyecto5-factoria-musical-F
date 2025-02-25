@@ -1,13 +1,9 @@
-import {Instrument} from "./instrument.js"
 import "./Keys.css"
-import {useEffect, useState } from "react"
+import {useEffect, useState, useContext } from "react"
+import { InstrumentContext } from "../Piano.jsx";
 
 export const Keys = () =>  {
-    
-    const[keys, setKeys] = useState(() => { 
-        const instrument = new Instrument("/sounds/church_organ");
-        return instrument.getInstrumentKeys();
-    })
+    const {instrument} = useContext(InstrumentContext);
     const [currentAudio, setCurrentAudio] = useState();
 
     const handleClick = (soundSrc) => {
@@ -21,7 +17,7 @@ export const Keys = () =>  {
 
     const handleKeyDown = (event) => {
         const keyPressed = event.key.toLowerCase();
-        const keyData = keys.find((tile) => tile.key.toLowerCase() === keyPressed)
+        const keyData = instrument.find((tile) => tile.key.toLowerCase() === keyPressed)
 
         if(keyData) handleClick(keyData.src)
 
@@ -31,11 +27,11 @@ export const Keys = () =>  {
         window.addEventListener("keydown", handleKeyDown)
 
         return () => window.removeEventListener("keydown", handleKeyDown)
-    }, [keys])
+    }, [instrument])
 
     return (
         <div className="piano-container">
-            {keys.map((tile) => {
+            {instrument.map((tile) => {
                return ( <div
                 key={tile.key}
                 className={tile.type === "white" ? "white-key": "black-key"}
