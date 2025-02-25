@@ -1,22 +1,22 @@
 import './InstrumentButton.css';
 import { Instrument } from '../../keys/instrument'; 
-//import { KeyContext } from '../piano';
-//import { useContext } from 'react';
+import { useContext } from 'react';
+import { InstrumentContext } from '../../Piano';
 
 export const InstrumentButton = (props) => {
-   // const { setInstrument } = useContext(KeyContext);
+ const { setInstrument } = useContext(InstrumentContext);
 
     const handleClick = () => {
         if(props.instrument === "Piano") {
-            setInstrument(new Instrument("/sounds/piano", "wav"));
+            setInstrument(new Instrument("/sounds/piano", "wav").getInstrumentKeys());
         } else if (props.instrument === "Órgano") {
-            setInstrument(new Instrument("/sounds/church_organ"));
+            setInstrument(new Instrument("/sounds/church_organ").getInstrumentKeys());
         } else if (props.instrument === "Teclado eléctrico") {
-            setInstrument(new Instrument("/sounds/electric_piano"));
+            setInstrument(new Instrument("/sounds/electric_piano").getInstrumentKeys());
         }
     }
 
     return (
-        <button className="ins_button" instrumentType={props.instrument} onClick={handleClick}>Piano eléctrico{props.instrument}</button>
+        <button className="ins_button" onClick={handleClick}>{props.instrument}</button>
     )
 }
