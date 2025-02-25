@@ -1,8 +1,7 @@
-// import { Keys } from './components/keys/Keys';
-import { InstrumentButton } from "./components/piano/config/instrument_buttons/InstrumentButton"; 
+import {Piano} from "./components/piano/Piano";
 import "./App.css"
 const App = () => {
-  return <InstrumentButton  />;
+  return <Piano />;
 };
 
 export default App;
