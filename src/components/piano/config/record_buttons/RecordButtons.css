@@ -1,4 +1,4 @@
-button {
+.record-button {
     width: 40px;
     height: 40px;
     border-radius: 10px;
@@ -10,7 +10,7 @@ button {
     margin: 0;
 }
 
-button:focus {
+.record-button:focus {
     border: black 0.5px solid;
     box-shadow: 0 0 20px 0 black;
 }
@@ -18,9 +18,20 @@ button:focus {
 .record-buttons {
     display: flex;
     gap: 10px;
+    align-items: center;
 }
 
 .record-icon {
     width: 30px;
     height: 30px;
+}
+
+.volume-buttons{
+    display: flex;
+    flex-direction: column;
+}
+.volume-button{
+    background-color: transparent;
+    border: none;
+
 }
