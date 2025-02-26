@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { InstrumentContext } from "../../Piano";
-import "./RecordButtons.css"
+import { InstrumentContext } from "../../../Piano";
+import "./VolumeButton.css"
 
 export const VolumeButton = (props) => {
 
@@ -15,7 +15,7 @@ export const VolumeButton = (props) => {
 
     return (
         <>
-        <button className="volume-button" onClick={() => handleVolume(props.action)}><img className="record-icon"
+        <button className="volume-button" onClick={() => handleVolume(props.action)}><img className="volume-icon"
         src={props.action === "increase" 
             ? "/public/img/icons/volume_up_icon.png" 
             : "/public/img/icons/volume_down_icon.png"} 

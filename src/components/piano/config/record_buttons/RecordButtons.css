@@ -1,3 +1,15 @@
+.record-buttons-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.volume-buttons{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
 .record-button {
     width: 40px;
     height: 40px;
@@ -15,23 +27,12 @@
     box-shadow: 0 0 20px 0 black;
 }
 
-.record-buttons {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
 .record-icon {
     width: 30px;
     height: 30px;
 }
 
-.volume-buttons{
-    display: flex;
-    flex-direction: column;
-}
-.volume-button{
-    background-color: transparent;
-    border: none;
-
+.rec-img {
+    width: 20px;
+    height: 20px;
 }
