@@ -1,0 +1,11 @@
+.song {
+margin: 0;
+padding: 0;
+width: 20%;
+cursor: pointer;
+}
+
+.song-img {
+    height: 100px;
+    width: 100px;
+}

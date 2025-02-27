@@ -1,0 +1,9 @@
+.songs-modal {
+    height: 100%;
+    width: 100%;
+}
+
+.songs-container {
+ display: flex;
+ gap: 5px;
+}
