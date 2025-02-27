@@ -1,0 +1,28 @@
+.level-modal {
+    width: 100%;
+    height: auto;
+    align-content: center;
+}
+
+.back-arrow {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    left: -45%;
+    cursor: pointer;
+}
+
+.back-arrow-img {
+    width: 28px;
+    height: 28px;
+}
+
+.buttons {
+    display: flex;
+    height: 60%;
+    gap: 10px;
+    justify-content: center;
+}

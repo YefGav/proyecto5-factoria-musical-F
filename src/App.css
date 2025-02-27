@@ -5,4 +5,11 @@
   text-align: center;
 }
 
+h1 {
+  font-size: 30px;
+}
 
+p {
+  margin: 0;
+  font-size: 14px;
+}
