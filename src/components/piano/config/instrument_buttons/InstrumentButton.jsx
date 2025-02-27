@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { InstrumentContext } from '../../Piano';
 
 export const InstrumentButton = (props) => {
- const { setInstrument } = useContext(InstrumentContext);
+    const { setInstrument } = useContext(InstrumentContext);
 
     const handleClick = () => {
         if(props.instrument === "Piano") {
