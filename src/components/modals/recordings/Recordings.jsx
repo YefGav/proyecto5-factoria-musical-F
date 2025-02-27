@@ -1,8 +1,9 @@
-import { RecordButtons } from "../../piano/config/record_buttons/RecordButtons"
 import './Recordings.css';
+import { useModal } from '../ModalContext';
 
-export const Recordings = ({recordings, closeModal}) => {
-    
+
+export const Recordings = () => {
+    const { closeModal } = useModal();
     
     return (
         <div className="recordings">
@@ -15,14 +16,24 @@ export const Recordings = ({recordings, closeModal}) => {
                     ) : (
                         recordings.map((rec, index) => (
                             <div key={index} className="record">
-                                <img className="play" src="/public/img/icons/play_icon.png" alt="" />
-                                <img className="pause" src="/public/img/icons/pause_icon.png" alt="" />
-                                <img className="stop" src="/public/img/icons/stop_icon.png" alt="" />
+                                <div className="icons">
+                                    <button className="icon-btn">
+                                        <img className="img-play" src="/public/img/icons/play_icon.png" alt="play" />
+                                    </button>
+                                    <button className="icon-btn">
+                                        <img className="img-btn" src="/public/img/icons/pause_icon.png" alt="pause" />
+                                    </button>
+                                    <button className="icon-btn">
+                                        <img className="img-btn" src="/public/img/icons/stop_icon.png" alt="stop" />
+                                    </button>
+                                </div>
                                 <p>{rec.title}</p>
                                 <p>{rec.instrument}</p>
                                 <p>{rec.date}</p>
                                 <p>{rec.duration}</p>
-                                <img className="delete" src="/public/img/icons/delete_icon.png" alt="" />
+                                <button className="icon-btn">
+                                    <img className="img-delete" src="/public/img/icons/delete_icon.png" alt="delete" />
+                                </button>
                                 <audio controls src={rec.audioURL}></audio>
                             </div>
                         ))
@@ -30,15 +41,21 @@ export const Recordings = ({recordings, closeModal}) => {
                  */}
                 <div className="record">
                     <div className="icons">
-                        <button className="icon-btn"><img className="img-play" src="/public/img/icons/play_icon.png" alt="" /></button>
-                        <button className="icon-btn"><img className="img-btn" src="/public/img/icons/pause_icon.png" alt="" /></button>
-                        <button className="icon-btn"><img className="img-btn" src="/public/img/icons/stop_icon.png" alt="" /></button>
+                        <button className="icon-btn">
+                            <img className="img-play" src="/public/img/icons/play_icon.png" alt="play" />
+                        </button>
+                        <button className="icon-btn">
+                            <img className="img-btn" src="/public/img/icons/pause_icon.png" alt="pause" />
+                        </button>
+                        <button className="icon-btn">
+                            <img className="img-btn" src="/public/img/icons/stop_icon.png" alt="stop" />
+                        </button>
                     </div>
                         <p>Título</p>
                         <p>Instrumento</p>
                         <p>Fecha de la grabación</p>
                         <p>Duración de la grabación</p>
-                        <button className="icon-btn"><img className="img-delete" src="/public/img/icons/delete_icon.png" alt="" /></button>
+                        <button className="icon-btn"><img className="img-delete" src="/public/img/icons/delete_icon.png" alt="delete" /></button>
                 </div>
         </div>
         </div>
