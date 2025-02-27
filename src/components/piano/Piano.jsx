@@ -14,7 +14,8 @@ export const Piano = () => {
         });
 
     const [volume, setVolume] = useState(1);
-
+    const [audioContext, setAudioContext] = useState(null);
+    const [destination, setDestination] = useState(null);
 
     useEffect(() => {
         instrument.forEach(tile =>{
@@ -22,9 +23,18 @@ export const Piano = () => {
             });
     }),[volume, instrument]
 
+    useEffect(() => {
+        if (!audioContext) {
+            const newAudioContext = new AudioContext();
+            const newDestination = newAudioContext.createMediaStreamDestination();
+            setAudioContext(newAudioContext);
+            setDestination(newDestination);
+        }
+    }), []
+
     return (
         <div className="piano">
-        <InstrumentContext.Provider value={{instrument, setInstrument, volume, setVolume}}>
+        <InstrumentContext.Provider value={{instrument, setInstrument, volume, setVolume, audioContext, destination}}>
         <Config />
         <Keys />
         </InstrumentContext.Provider>

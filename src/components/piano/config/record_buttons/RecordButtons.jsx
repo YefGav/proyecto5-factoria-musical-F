@@ -1,71 +1,85 @@
-import { useState, useEffect } from "react";
 import './RecordButtons.css';
+import { useState, useContext } from "react";
 import { VolumeButton } from "./volume_buttons/VolumeButton";
+import { InstrumentContext } from "../../Piano";
 
 export const RecordButtons = () => {
 
+    const {destination} = useContext(InstrumentContext)
     const [recording, setRecording] = useState(false);
     const [recorder, setRecord] = useState(null);
-    const [audioBlob, setAudioBlob] = useState(null);
-    
-    const getStream = async () => {
-        return await navigator.mediaDevices.getDisplayMedia({ audio: true });
-    }
-    
-    const startRecording = async () => {
-        if (recording) {
-            return;
-        } 
 
-        const stream = await getStream();
-        const mediaRecorder = new MediaRecorder(stream);
+    const startRecording = () => {
+        if (!destination || recording) return;
+
+        const mediaRecorder = new MediaRecorder(destination.stream);
         let chunks = [];
         
-        mediaRecorder.onstart = () => {
-            setRecording(true);
-        }
+        mediaRecorder.onstart = () => setRecording(true);
+        mediaRecorder.ondataavailable = (e) => chunks.push(e.data);
 
-        mediaRecorder.ondataavailable = (e) => {
-            chunks.push(e.data);
-            console.log(chunks);
-        }
-
-        mediaRecorder.onstop = () => {
+        mediaRecorder.onstop = async () => {
+            
             setRecording(false);
+
+            const requestHeader = new Headers();
+            requestHeader.append("Content-Type", "application/json")
+
             const blob = new Blob(chunks, { type: "audio/webm"});
-            setAudioBlob(blob);
-        }
+            const recordDuration = await getAudioDuration(blob);
+            const blob64 = await blobToBase64(blob);
+            
+            fetch("http://localhost:8000/recording", {
+                method: "POST",
+                headers: requestHeader,
+                body: JSON.stringify({audioData: blob64, title: "titulo", duration: recordDuration})
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error(error)) 
 
-        mediaRecorder.onpause = () => {
-            setRecording(false);
         }
-
-        mediaRecorder.onresume = () => {
-            setRecording(true);
-        }
+        mediaRecorder.onpause = () => setRecording(false);
+        mediaRecorder.onresume = () => setRecording(true);
 
         mediaRecorder.start();
         setRecord(mediaRecorder);
     }
 
     const stopRecording = () => {
-        if (recorder && recording) {
-            recorder.stop();
-        }
+        if (recorder && recording)  recorder.stop();
     }
 
     const pauseRecording = () => {
-        if (recorder && recording) {
-            recorder.pause();
-        }
+        if (recorder && recording) recorder.pause();
     }
 
     const resumeRecording = () => {
-        if (recorder && !recording) {
-            recorder.resume();
-        }
+        if (recorder && !recording) recorder.resume();
     }
 
+    const blobToBase64 = (blob) => {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(blob);
+            reader.onloadend = () => {
+                const base64data = reader.result.split(',')[1]; 
+                resolve(base64data);
+            };
+            reader.onerror = error => reject(error);
+        });
+    };
+
+    const getAudioDuration = (blob) => {
+        return new Promise((resolve, reject) => {
+            const audio = new Audio(URL.createObjectURL(blob));
+            audio.onloadedmetadata = () => {
+                resolve(audio.duration); 
+            };
+            audio.onerror = reject;
+        });
+    };
+    
     return (
         
         <div className="record-buttons-container">
@@ -83,6 +97,5 @@ export const RecordButtons = () => {
                        <img className="record-icon" src="/public/img/icons/pause_icon.png" alt="pause icon" />
                </button>
         </div>
-
-)
+    )
 }
