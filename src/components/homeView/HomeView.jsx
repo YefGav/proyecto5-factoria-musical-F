@@ -1,16 +1,21 @@
 import "./HomeView.css";
+import { ModalProvider } from "../modals/ModalContext";
+import { ModalContainer } from './modal_container/ModalContainer';
 import { Menu } from "../menu/Menu";
 import { Piano } from "../piano/Piano";
 
 export const HomeView = () => {
 
-    return ( 
-        <div className="container">
-            <div className="container-superior">
-                <Menu />
-            </div>
-                <Piano />
+    return (
+        <>
+        <ModalProvider>
+        <div className='container'>
+            <Menu />
+            <ModalContainer />
         </div>
-    );
+            <Piano />  
+        </ModalProvider>
+        </>
+    )
 };
 

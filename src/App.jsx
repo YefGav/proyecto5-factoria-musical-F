@@ -4,8 +4,7 @@ import "./App.css"
 
 
 const App = () => {
-
-  return <HomeView />;
+  return <HomeView  />;
 };
 
 export default App;
