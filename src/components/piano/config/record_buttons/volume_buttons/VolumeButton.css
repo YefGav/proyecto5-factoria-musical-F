@@ -2,9 +2,10 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    width: 40px;
-    height: 27px;
+    height: 70%;
+    width: 100%;
     padding: 0;
+    box-shadow: none;
 }
 
 .volume-button:focus {
@@ -14,6 +15,5 @@
 }
 
 .volume-icon {
-    width: 30px;
-    height: 25px;
+    height: 100%;
 }

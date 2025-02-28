@@ -1,17 +1,16 @@
 .ins_button {
-    height: 50px;
-    width: 80px;
+    width: 25%;
     border-radius: 10px;
     background-color: lightgrey;
     color: black;
     font-size: 15px;
-    padding: 5px;
+    padding: 10px;
     border: none;
     cursor:pointer;
     box-shadow: 0 0 10px 0 black;
 }
 
-button:focus {
+.ins_button:focus {
     border: black 1px solid;
     box-shadow: 0 0 20px 0 black;
 }

@@ -1,18 +1,32 @@
 .record-buttons-container {
     display: flex;
-    gap: 10px;
+    gap: 5%;
     align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 .volume-buttons{
     display: flex;
+    height: 100%;
+    width: 20%;
     flex-direction: column;
+    gap: 5%;
     background-color: transparent;
+    justify-content: center;
+}
+
+.record-buttons {
+    display: inline-flex;
+    gap: 5%;
+    width: 70%;
+    height: 100%;
+    align-items: center;
 }
 
 .record-button {
-    width: 40px;
-    height: 40px;
+    height: 70%;
+    width: 80%;
     border-radius: 10px;
     background-color: lightgrey;
     border: none;
@@ -20,6 +34,8 @@
     box-shadow: 0 0 5px 0 black;
     padding: 0;
     margin: 0;
+    align-self: center;
+    justify-self: center;
 }
 
 .record-button:focus {
@@ -27,12 +43,16 @@
     box-shadow: 0 0 20px 0 black;
 }
 
-.record-icon {
-    width: 30px;
-    height: 30px;
+.play-icon {
+    width: 45%;
+    align-self: center;
+    justify-self: center;
+}
+
+.pause-icon {
+    width: 60%;
 }
 
 .rec-img {
-    width: 20px;
-    height: 20px;
+    width: 45%;
 }
