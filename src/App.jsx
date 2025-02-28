@@ -1,7 +1,8 @@
-import {Piano} from "./components/piano/Piano";
+import { HomeView } from "./components/homeView/HomeView";
+
 import "./App.css"
 const App = () => {
-  return <Piano />;
+  return <HomeView />;
 };
 
 export default App;
