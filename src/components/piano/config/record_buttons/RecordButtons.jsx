@@ -69,19 +69,21 @@ export const RecordButtons = () => {
     return (
         
         <div className="record-buttons-container">
-        <div className="volume-buttons">
-            <VolumeButton action="increase"/>
-            <VolumeButton action="decrease" />
-        </div>
-        <button className="record-button" onClick={recording ? stopRecording : startRecording}>
-                       <img className="rec-img" src="/public/img/icons/rec_icon.png" alt="" />
+            <div className="volume-buttons">
+                <VolumeButton action="increase"/>
+                <VolumeButton action="decrease" />
+            </div>
+            <div className="record-buttons">
+                <button className="record-button" onClick={recording ? stopRecording : startRecording}>
+                       <img className="rec-img" src="/img/icons/rec_icon.png" alt="" />
                </button>
                <button className="record-button" onClick={resumeRecording}>
-                       <img className="record-icon" src="/public/img/icons/play_icon.png" alt="play icon" />
+                       <img className="play-icon" src="/img/icons/play_icon.png" alt="play icon" />
                </button>
                <button className="record-button" onClick={pauseRecording}>
-                       <img className="record-icon" src="/public/img/icons/pause_icon.png" alt="pause icon" />
+                       <img className="pause-icon" src="/img/icons/pause_icon.png" alt="pause icon" />
                </button>
+            </div>
         </div>
 
 )

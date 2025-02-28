@@ -17,8 +17,8 @@ export const VolumeButton = (props) => {
         <>
         <button className="volume-button" onClick={() => handleVolume(props.action)}><img className="volume-icon"
         src={props.action === "increase" 
-            ? "/public/img/icons/volume_up_icon.png" 
-            : "/public/img/icons/volume_down_icon.png"} 
+            ? "/img/icons/volume_up_icon.png" 
+            : "/img/icons/volume_down_icon.png"} 
             alt="volume icon" /></button>
         </>
     )

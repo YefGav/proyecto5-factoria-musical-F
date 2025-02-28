@@ -13,7 +13,9 @@ export const HomeView = () => {
             <Menu />
             <ModalContainer />
         </div>
+        <div className="inf-container">
             <Piano />  
+        </div>
         </ModalProvider>
         </>
     )

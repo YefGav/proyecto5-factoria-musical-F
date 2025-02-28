@@ -6,7 +6,7 @@ export const Recordings = () => {
     
     return (
         <div className="recordings">
-            <button className="close-button" onClick={closeModal}><img className="close-img" src="/public/img/icons/close_icon.png" alt="close icon" /></button>
+            <button className="close-button" onClick={closeModal}><img className="close-img" src="/img/icons/close_icon.png" alt="close icon" /></button>
             <h1>GRABACIONES</h1>
                 
                 <div className="recordings-list">
