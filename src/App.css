@@ -9,11 +9,12 @@
 
 h1 {
   font-size: 30px;
+  margin: 15px;
 }
 
 p {
   margin: 0;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 button {
