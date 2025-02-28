@@ -13,5 +13,10 @@ h1 {
 
 p {
   margin: 0;
-  font-size: 14px;
+  font-size: 18px;
+}
+
+button {
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }

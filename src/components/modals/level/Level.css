@@ -15,7 +15,7 @@
     position: absolute;
     top: 4%;
     left: 31.5%;
-    cursor: pointer;
+    box-shadow: none;
 }
 
 .back-arrow-img {
