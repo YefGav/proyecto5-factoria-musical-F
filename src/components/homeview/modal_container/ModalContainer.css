@@ -1,5 +1,11 @@
-.modal-container {
+.modal {
     width: 70%;
     height: auto;
+    border: 1px black solid;
+}
+
+.modal-content {
+    height: 100%;
     margin-bottom: 20px;
+    border: 1px red solid;
 }
