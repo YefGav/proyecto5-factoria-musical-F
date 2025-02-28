@@ -1,14 +1,14 @@
 .menu-container {
     height: 100%;
     width: 28%;
-    border: 1px red solid;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
 }
 
 .img-logo {
-    height: 70%;
+    height: 67%;
+    width: 100%;
 }
 
 .menu-buttons {

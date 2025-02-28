@@ -1,6 +1,7 @@
 .songs-modal {
     height: 100%;
     width: 100%;
+    padding-top: 10%;
 }
 
 .songs-container {
@@ -8,4 +9,5 @@
  gap: 5px;
  margin-bottom: 20px;
  height: 70%;
+ align-items: center;
 }
