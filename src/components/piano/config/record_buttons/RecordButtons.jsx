@@ -2,12 +2,14 @@ import './RecordButtons.css';
 import { useState, useContext } from "react";
 import { VolumeButton } from "./volume_buttons/VolumeButton";
 import { InstrumentContext } from "../../Piano";
+import { useModal } from '../../../modals/ModalContext';
 
 export const RecordButtons = () => {
 
     const {destination} = useContext(InstrumentContext)
     const [recording, setRecording] = useState(false);
     const [recorder, setRecord] = useState(null);
+    const {requestTitle} = useModal();
 
     const startRecording = () => {
         if (!destination || recording) return;
@@ -28,11 +30,12 @@ export const RecordButtons = () => {
             const blob = new Blob(chunks, { type: "audio/webm"});
             const recordDuration = await getAudioDuration(blob);
             const blob64 = await blobToBase64(blob);
+            const title = await requestTitle();
             
             fetch("http://localhost:8000/recording", {
                 method: "POST",
                 headers: requestHeader,
-                body: JSON.stringify({audioData: blob64, title: "titulo", duration: recordDuration})
+                body: JSON.stringify({audioData: blob64, title: title, duration: recordDuration, pianoConfiguration: "piano"})
             })
             .then(response => response.json())
             .then(data => console.log(data))
