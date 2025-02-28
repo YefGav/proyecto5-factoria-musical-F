@@ -1,10 +1,9 @@
-import { HomeView } from "./components/homeView/HomeView";
+import { HomeView } from './components/homeView/HomeView'
 
-import "./App.css"
-
+import './App.css'
 
 const App = () => {
-  return <HomeView  />;
-};
+  return <HomeView />
+}
 
-export default App;
+export default App
