@@ -5,9 +5,9 @@
 }
 
 .songs-container {
- display: flex;
- gap: 5px;
- margin-bottom: 20px;
- height: 70%;
- align-items: center;
+     display: flex;
+     gap: 5px;
+     margin-bottom: 20px;
+     height: 60%;
+     align-items: center;
 }

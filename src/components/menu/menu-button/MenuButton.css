@@ -3,6 +3,7 @@
     height: inherit;
     border-radius: 12px;
     padding: 20px;
+    border: none;
     background-color: rgba(75, 159, 255, 0.74);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
