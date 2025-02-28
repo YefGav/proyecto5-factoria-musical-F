@@ -1,8 +1,9 @@
-// import { Keys } from './components/keys/Keys';
-import { InstrumentButton } from "./components/piano/config/instrument_buttons/InstrumentButton"; 
+import { HomeView } from "./components/homeview/HomeView"; 
 import "./App.css"
+
+
 const App = () => {
-  return <InstrumentButton  />;
+  return <HomeView  />;
 };
 
 export default App;

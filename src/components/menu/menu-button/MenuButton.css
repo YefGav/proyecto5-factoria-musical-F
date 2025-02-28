@@ -1,0 +1,8 @@
+.menu-btn {
+    width: 40%;
+    height: inherit;
+    border-radius: 12px;
+    padding: 15px;
+    background-color: lightgrey;
+    box-shadow: 0 0 10px rgba(41, 59, 200, 0.1);
+}

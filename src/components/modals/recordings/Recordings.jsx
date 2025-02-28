@@ -1,7 +1,6 @@
 import './Recordings.css';
 import { useModal } from '../ModalContext';
 
-
 export const Recordings = () => {
     const { closeModal } = useModal();
     
