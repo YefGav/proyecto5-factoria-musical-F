@@ -2,9 +2,10 @@ import { Level } from "../../modals/level/Level";
 import { Songs } from "../../modals/songs/Songs";
 import { Score } from "../../modals/score/Score";
 import { useModal } from "../../modals/ModalContext";
+import { RequestTitleModal } from "../../modals/request_title/RequestTitleModal";
 
 export const ModalContainer = () => {
-    const { activeModal} = useModal();
+    const {activeModal} = useModal();
 
     if (!activeModal) return null;
     return (
@@ -13,7 +14,7 @@ export const ModalContainer = () => {
               {activeModal === "openLevel" && <Level />}
               {activeModal === "songs" && <Songs />}
               {activeModal === "score" && <Score />}
-              {activeModal === "openRecordings" && <Recordings />}
+              {activeModal === "endRecording" && <RequestTitleModal isOpen={true}/>}
             </div>
         </div>
     )

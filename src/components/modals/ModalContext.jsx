@@ -1,4 +1,4 @@
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useRef } from "react";
 
 const ModalContext = createContext();
 
@@ -7,6 +7,7 @@ export const ModalProvider = ({ children }) => {
   const [selectedSongs, setSelectedSongs] = useState([]);
   const [selectedSong, setSelectedSong] = useState(null);
   const [modalHistory, setModalHistory] = useState([]);
+  const titlePromiseRef = useRef(null);
 
   const openModal = (modalName, song = null, songs = []) => {
     
@@ -41,8 +42,23 @@ export const ModalProvider = ({ children }) => {
     setModalHistory([]);
   };
 
+  const requestTitle = () => {
+    return new Promise((resolve) => {
+        titlePromiseRef.current = resolve;
+        setActiveModal("endRecording")
+      })
+    }
+
+  const submitTitle = (title) => {
+    if(titlePromiseRef.current) {
+      titlePromiseRef.current(title);
+      titlePromiseRef.current = null;
+      closeModal();
+    }
+  }
+
   return (
-    <ModalContext.Provider value={{ activeModal, openModal, goBackModal, closeModal, selectedSongs, selectedSong }}>
+    <ModalContext.Provider value={{ activeModal, openModal, goBackModal, closeModal, selectedSongs, selectedSong, requestTitle, submitTitle }}>
       {children}
     </ModalContext.Provider>
   );
