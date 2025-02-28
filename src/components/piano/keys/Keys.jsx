@@ -3,7 +3,7 @@ import { useContext, useEffect } from "react";
 import {InstrumentContext} from "../Piano"
 export const Keys = () =>  {
     
-    const {instrument, volume} = useContext(InstrumentContext)
+    const {instrument, volume, audioContext, destination} = useContext(InstrumentContext)
 
     useEffect(() => {
 
@@ -12,10 +12,12 @@ export const Keys = () =>  {
             const keyPressed = event.key.toLowerCase();
             const keyData = instrument.find((tile) => tile.key.toLowerCase() === keyPressed)
             
-    
             if(!keyData.sound.ended){
                 const newSound = new Audio(keyData.src);
                 newSound.volume = volume;
+                const source = audioContext.createMediaElementSource(newSound);
+                source.connect(destination);
+                source.connect(audioContext.destination)
                 newSound.play().then(() => console.log("Reproduciendo:", keyData.sound)).catch(error => console.error(error))
             } else {
                 keyData.sound.volume = volume;
@@ -28,7 +30,7 @@ export const Keys = () =>  {
 
         return () => window.removeEventListener("keydown", handleKeyDown)
 
-    }, [instrument, volume])
+    }, [instrument, volume, audioContext, destination])
 
 
 
@@ -39,6 +41,10 @@ export const Keys = () =>  {
         if(!sound.ended){
             const newSound = new Audio(sound.src);
             newSound.volume = volume;
+            const source = audioContext.createMediaElementSource(newSound);
+            source.connect(destination);
+            source.connect(audioContext.destination);
+
             newSound.play().then(() => console.log("Reproduciendo:", newSound)).catch(error => console.error(error))
         } else {
             sound.play().then(() => console.log("Reproduciendo:", sound)).catch(error => console.error(error));
