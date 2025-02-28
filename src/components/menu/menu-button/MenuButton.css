@@ -1,0 +1,22 @@
+.menu-btn {
+    width: 140px;
+    height: inherit;
+    border-radius: 12px;
+    padding: 5px;
+    font-size: 15px;
+    margin: 15px;
+    margin-left: 110px;
+    background-color: lightgrey;
+    box-shadow: 0 0 10px rgba(41, 59, 200, 0.1);
+}
+
+.btn-recording {
+    width: 100px;
+    border-radius: 12px;
+    padding: 5px;
+    font-size: 18px;
+    margin-left: 125px;
+    background-color: rgb(235, 230, 230);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+

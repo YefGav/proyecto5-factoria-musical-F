@@ -1,10 +1,11 @@
-import { HomeView } from "./components/menu/Menu";
+import { HomeView } from "./components/homeView/HomeView";
+
 import "./App.css"
 
 
 const App = () => {
-  return <HomeView />
-  ;
+
+  return <HomeView />;
 };
 
 export default App;
