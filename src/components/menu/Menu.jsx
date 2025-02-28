@@ -18,8 +18,8 @@ export const Menu = () => {
 
         <div className="buttons">
           
-           <MenuButton text = "JUGAR" />
-           <MenuButton text = "GRABACIONES" />
+           <MenuButton action="openLevel"  text = "JUGAR" />
+           <MenuButton action="openRecordings" text = "GRABACIONES" />
         
         </div>
       </div>
