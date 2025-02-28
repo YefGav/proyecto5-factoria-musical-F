@@ -36,7 +36,7 @@ export const Level = () => {
                 <img className="back-arrow-img" src='/img/icons/back-arrow.png' alt='Back Arrow' />
             </button>
             <h1>Por favor, seleccione un nivel</h1>
-            <div className="buttons">
+            <div className="level-buttons">
                 <LevelButton songs={easySongs} text="FÁCIL" />
                 <LevelButton songs={mediumSongs} text="MEDIO" />
                 <LevelButton songs={hardSongs} text="DIFÍCIL" />

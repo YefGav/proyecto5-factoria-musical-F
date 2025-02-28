@@ -1,7 +1,9 @@
 .level-modal {
     width: 100%;
-    height: auto;
-    align-content: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .back-arrow {
@@ -10,8 +12,9 @@
     padding: 0;
     background-color: transparent;
     border: none;
-    position: relative;
-    left: -45%;
+    position: absolute;
+    top: 4%;
+    left: 31.5%;
     cursor: pointer;
 }
 
@@ -20,9 +23,9 @@
     height: 28px;
 }
 
-.buttons {
+.level-buttons {
     display: flex;
-    height: 60%;
     gap: 10px;
     justify-content: center;
+    margin: 40px 0 0;
 }
