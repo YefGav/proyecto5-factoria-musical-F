@@ -1,0 +1,38 @@
+.record-buttons-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.volume-buttons{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+.record-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: lightgrey;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 5px 0 black;
+    padding: 0;
+    margin: 0;
+}
+
+.record-button:focus {
+    border: black 0.5px solid;
+    box-shadow: 0 0 20px 0 black;
+}
+
+.record-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.rec-img {
+    width: 20px;
+    height: 20px;
+}

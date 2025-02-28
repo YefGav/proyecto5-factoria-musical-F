@@ -1,0 +1,6 @@
+.piano {
+    background-color: grey;
+    padding: 45px 30px 40px 30px ;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

@@ -19,18 +19,21 @@ export class Instrument {
         const blackPositions = [1, 2, 4, 5, 6, 8, 9, 11, 12, 13];
 
         const baseKeys = keys.map((key) => {
-        const isBlack = blackKeys.includes(key);
-        return {
-            key,
-            type: isBlack ? "black" : "white", 
-            ...(isBlack && { position: blackPositions[blackKeys.indexOf(key)]})
-        };
-    });
-        return baseKeys.map(item => ({
-            ...item, 
-            src: `${this.directory}/${item.key.toLowerCase()}.${this.extension}`
-        }
-    ))}
+            const isBlack = blackKeys.includes(key);
+            return {
+                key,
+                type: isBlack ? "black" : "white", 
+                ...(isBlack && { position: blackPositions[blackKeys.indexOf(key)]})
+            };
+        });
+            return baseKeys.map(item => ({
+                ...item, 
+                sound: new Audio(`${this.directory}/${item.key.toLowerCase()}.${this.extension}`),
+                src: `${this.directory}/${item.key.toLowerCase()}.${this.extension}` 
+            }
+        ))
+    
+    }
 
     getInstrumentKeys(){
         return this.instrumentKeys;
