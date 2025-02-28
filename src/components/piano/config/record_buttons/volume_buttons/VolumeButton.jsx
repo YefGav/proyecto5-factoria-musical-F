@@ -37,5 +37,3 @@ export const VolumeButton = (props) => {
 VolumeButton.propTypes = {
   action: PropTypes.string.isRequired,
 };
-
-export default VolumeButton;
