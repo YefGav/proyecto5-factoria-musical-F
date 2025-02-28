@@ -8,9 +8,8 @@ export const Menu = () => {
         <img
           src="/public/img/icons/logoFactoriaMusical-black.png"
           alt="Factoria Musical Play with us!"
-          className="img-logo"
-        />
-
+          className="img-logo">
+        </img>
         <div className="buttons">
           <MenuButton action="openLevel" text="JUGAR" />
           <MenuButton action="openRecordings" text="GRABACIONES" />

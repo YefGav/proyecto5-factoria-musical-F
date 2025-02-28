@@ -1,4 +1,5 @@
 import { createContext, useState, useContext, useRef } from "react";
+import PropTypes from "prop-types";
 
 const ModalContext = createContext();
 
@@ -10,14 +11,14 @@ export const ModalProvider = ({ children }) => {
   const titlePromiseRef = useRef(null);
 
   const openModal = (modalName, song = null, songs = []) => {
-    
+
     if (activeModal) {
       setModalHistory((prevHistory) => [
         ...prevHistory,
         { activeModal, selectedSong, selectedSongs },
       ]);
     }
-    
+
     setActiveModal(modalName);
     setSelectedSong(song);
     setSelectedSongs(songs);
@@ -64,4 +65,9 @@ export const ModalProvider = ({ children }) => {
   );
 };
 
+ModalProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default ModalProvider;
 export const useModal = () => useContext(ModalContext);

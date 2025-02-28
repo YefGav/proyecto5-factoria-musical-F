@@ -1,9 +1,10 @@
 import "./RequestTitleModal.css"
 import { useModal } from "../ModalContext";
 import { useEffect, useRef, useState } from "react"
+import PropTypes from 'prop-types'
 
 export const RequestTitleModal = ({isOpen}) => {
-    
+
     const {submitTitle} = useModal();
     const [title, setTitle] = useState("");
     const modalRef = useRef(null);
@@ -33,3 +34,9 @@ export const RequestTitleModal = ({isOpen}) => {
         </form>
     )
 }
+
+RequestTitleModal.propTypes = {
+    isOpen: PropTypes.bool
+}
+
+export default RequestTitleModal

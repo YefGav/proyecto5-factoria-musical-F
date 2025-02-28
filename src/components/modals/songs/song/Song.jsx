@@ -1,14 +1,22 @@
-import './Song.css';
-import { useModal } from '../../ModalContext';
+import './Song.css'
+import { useModal } from '../../ModalContext'
+import PropTypes from 'prop-types'
 
 export const Song = ({ imgSrc, title, song }) => {
+  const { openModal } = useModal()
 
-  const { openModal } = useModal();
+  return (
+    <div className="score" onClick={() => openModal('score', song)}>
+      <img src={imgSrc} alt={title} />
+      <p>{title}</p>
+    </div>
+  )
+}
 
-    return (
-      <div className="score" onClick={() => openModal("score", song)}>
-        <img src={imgSrc} alt={title} />
-        <p>{title}</p>
-      </div>
-    );
-  };
+Song.propTypes = {
+  imgSrc: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  song: PropTypes.object.isRequired,
+}
+
+export default Song
