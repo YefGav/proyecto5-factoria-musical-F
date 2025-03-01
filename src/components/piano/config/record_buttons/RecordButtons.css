@@ -8,8 +8,9 @@
 
 .volume-buttons{
     display: flex;
-    height: 80%;
+    height: 100%;
     width: 13%;
+    align-self: center;
     flex-direction: column;
     gap: 5%;
     background-color: transparent;
@@ -24,34 +25,22 @@
 }
 
 .record-button {
-    height: 50%;
-    width: 30%;
+    height: 75%;
+    background-color: transparent;
+    border: 0.5px black solid;
     border-radius: 10px;
-    background-color: rgba(109, 177, 254, 0.74);
-    border: none;
-    cursor: pointer;
-    box-shadow: 1px 2px 0px 3px #15283d;
     padding: 0;
     margin: 0;
-    align-self: center;
-    justify-self: center;
+    box-shadow: 1px 2px 2px 1px #000000;
 }
 
 .record-button:focus {
-    border: black 0.5px solid;
-    box-shadow: 0 0 20px 0 black;
+    border: none;
+    box-shadow: 1px 2px 1px 1px white;
 }
 
-.play-icon {
-    width: 35%;
-    align-self: center;
-    justify-self: center;
-}
-
-.pause-icon {
-    width: 50%;
-}
-
-.rec-img {
-    width: 35%;
+.icon {
+    border-radius: 10px;
+    height: 100%;
+    cursor: pointer;
 }

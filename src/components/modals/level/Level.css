@@ -18,6 +18,11 @@
     box-shadow: none;
 }
 
+
+.back-arrow:active {
+    box-shadow: none;
+}
+
 .back-arrow-img {
     width: 28px;
     height: 28px;

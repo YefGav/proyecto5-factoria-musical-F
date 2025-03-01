@@ -1,9 +1,7 @@
 .volume-button{
     background-color: transparent;
     border: none;
-    cursor: pointer;
-    height: 70%;
-    width: 100%;
+    cursor: pointer;;
     padding: 0;
     box-shadow: none;
 }

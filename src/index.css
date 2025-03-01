@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Noto Serif Khojki", serif;
   line-height: 1.5;
   font-weight: 400;
   height: 100vh;
@@ -24,6 +24,14 @@ html, body {
 * {
   max-width: 100%;
 }
+
+@font-face {
+  font-family: "Noto Serif Khojki", serif;
+  src: url(/font/NotoSerifKhojki-VariableFont_wght.ttf);
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {
