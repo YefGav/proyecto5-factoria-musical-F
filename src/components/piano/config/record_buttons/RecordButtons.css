@@ -3,30 +3,29 @@
     gap: 5%;
     align-items: center;
     height: 100%;
-    width: 100%;
+    justify-content: right;
 }
 
 .volume-buttons{
     display: flex;
-    height: 100%;
-    width: 20%;
+    height: 80%;
+    width: 13%;
     flex-direction: column;
     gap: 5%;
     background-color: transparent;
-    justify-content: center;
 }
 
 .record-buttons {
     display: inline-flex;
     gap: 5%;
-    width: 70%;
+    width: 55%;
     height: 100%;
     align-items: center;
 }
 
 .record-button {
-    height: 70%;
-    width: 80%;
+    height: 50%;
+    width: 30%;
     border-radius: 10px;
     background-color: lightgrey;
     border: none;
@@ -44,15 +43,15 @@
 }
 
 .play-icon {
-    width: 45%;
+    width: 35%;
     align-self: center;
     justify-self: center;
 }
 
 .pause-icon {
-    width: 60%;
+    width: 50%;
 }
 
 .rec-img {
-    width: 45%;
+    width: 35%;
 }
