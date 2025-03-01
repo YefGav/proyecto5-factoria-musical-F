@@ -6,9 +6,9 @@ export const Config = () => {
   return (
     <div className="config-container">
       <div className="instrument-config">
-        <InstrumentButton instrument="Piano" />
-        <InstrumentButton instrument="Órgano" />
-        <InstrumentButton instrument="Teclado eléctrico" />
+        <InstrumentButton instrument="PIANO" />
+        <InstrumentButton instrument="ÓRGANO" />
+        <InstrumentButton instrument="TECLADO ELÉCTRICO" />
       </div>
       <div className='record-config'>
       <RecordButtons/>

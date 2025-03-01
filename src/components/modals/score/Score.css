@@ -1,18 +1,16 @@
 .score-modal {
     height: 100%;
-    border: 1px red solid;
-
 }
 
 .score {
-    height: 100%;
-    border: 1px black solid;
+    height: 90%;
+    margin-top: 1%;
 }
 
 .score-img {
-    width: 93%;
+    width: 90%;
     height: 100%;
     display: flex;
     justify-self: flex-end;
-    border: 1px yellow solid;
+    padding: 1.5%;
 }

@@ -3,7 +3,10 @@
   width: 100vw;
   margin: 0 auto;
   text-align: center;
-  background: linear-gradient(to bottom, #4a90e2, #9013fe);
+  background-image: url('/img/icons/bg-homeView.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+ /*  background: linear-gradient(to bottom, #4a90e2, #9013fe); */
 }
 
 h1 {
@@ -14,9 +17,15 @@ h1 {
 p {
   margin: 0;
   font-size: 17px;
+  color: white;
 }
 
 button {
   cursor: pointer;
+  color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.7);
 }

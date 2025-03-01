@@ -3,6 +3,7 @@ margin: 0;
 padding: 0;
 width: 25%;
 cursor: pointer;
+align-self: flex-start;
 }
 
 .song-img {
