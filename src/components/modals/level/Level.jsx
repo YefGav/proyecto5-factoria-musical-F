@@ -4,7 +4,7 @@ import { useModal } from '../ModalContext';
 
 export const Level = () => {
 
-    const {setActiveModal} = useModal();
+    const {goBackModal} = useModal();
 
     const easySongs = [
         {id: 1, imgSrc: "/img/songs/estrellita-caratula.jpg", title: "Estrellita donde estás", scoreSrc:"/img/songs/estrellita.png"},
@@ -32,7 +32,7 @@ export const Level = () => {
 
     return (
         <div className='level-modal'>
-            <button className="back-arrow" onClick={() => setActiveModal("welcome")}>
+            <button className="back-arrow" onClick={goBackModal}>
                 <img className="back-arrow-img" src='/img/icons/back-arrow.png' alt='Back Arrow' />
             </button>
             <h1>Por favor, seleccione un nivel</h1>

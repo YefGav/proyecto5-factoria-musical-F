@@ -13,9 +13,6 @@ export const Config = () => {
       <div className='record-config'>
       <RecordButtons/>
       </div>
-      <div className='record-config'>
-      <RecordButtons/>
-      </div>
     </div>
   );
 };

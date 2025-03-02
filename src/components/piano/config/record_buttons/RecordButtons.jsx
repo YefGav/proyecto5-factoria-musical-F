@@ -95,21 +95,15 @@ export const RecordButtons = () => {
         className="record-button"
         onClick={recording ? stopRecording : startRecording}
       >
-        <img className="rec-img" src="/public/img/icons/rec_icon.png" alt="" />
+        <img className="icon" src="/img/icons/rec.png" alt="" />
       </button>
       <button className="record-button" onClick={resumeRecording}>
-        <img
-          className="record-icon"
-          src="/public/img/icons/play_icon.png"
-          alt="play icon"
-        />
+      <img className="icon" src="/img/icons/play.png" alt="play icon" />
+
       </button>
       <button className="record-button" onClick={pauseRecording}>
-        <img
-          className="record-icon"
-          src="/public/img/icons/pause_icon.png"
-          alt="pause icon"
-        />
+      <img className="icon" src="/img/icons/pause.png" alt="pause icon" />
+
       </button>
     </div>
   )
