@@ -16,6 +16,7 @@ export const Piano = () => {
     const [volume, setVolume] = useState(1);
     const [audioContext, setAudioContext] = useState(null);
     const [destination, setDestination] = useState(null);
+    const [instrumentConfig, setInstrumentConfig] = useState("PIANO");
 
     useEffect(() => {
         instrument.forEach(tile =>{
@@ -34,7 +35,7 @@ export const Piano = () => {
 
     return (
         <div className="piano">
-        <InstrumentContext.Provider value={{instrument, setInstrument, volume, setVolume, audioContext, destination}}>
+        <InstrumentContext.Provider value={{instrument, setInstrument, volume, setVolume, audioContext, destination, setInstrumentConfig, instrumentConfig}}>
         <Config />
         <Keys />
         </InstrumentContext.Provider>
