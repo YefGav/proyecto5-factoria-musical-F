@@ -38,7 +38,6 @@
 .record {
     background-color: white;
     display: inline-flex;
-    gap: 5px;
     width: 97%;
     height: 20%;
     margin: 0;
@@ -47,11 +46,19 @@
     justify-content: space-between;
     border-radius: 10px;
     box-shadow: 4px 3px 8px rgb(0, 0, 0);
+    text-wrap: nowrap;
 }
 
 .record > p {
+    width: 17ch;
+    text-overflow: ellipsis;
+    overflow: hidden;
     color: black;
     font-size: 1rem;
+}
+
+.record-title{
+    text-align: start;
 }
 
 .icons {
