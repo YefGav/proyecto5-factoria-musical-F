@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const ModalContext = createContext();
 
 export const ModalProvider = ({ children }) => {
-  const [activeModal, setActiveModal] = useState(null);
+  const [activeModal, setActiveModal] = useState("welcome");
   const [selectedSongs, setSelectedSongs] = useState([]);
   const [selectedSong, setSelectedSong] = useState(null);
   const [modalHistory, setModalHistory] = useState([]);
@@ -57,6 +57,10 @@ export const ModalProvider = ({ children }) => {
       closeModal();
     }
   }
+
+  const resetModal = () => {
+    setActiveModal("welcome");
+  };
 
   return (
     <ModalContext.Provider value={{ activeModal, openModal, goBackModal, closeModal, selectedSongs, selectedSong, requestTitle, submitTitle }}>

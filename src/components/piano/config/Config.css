@@ -1,11 +1,18 @@
 .config-container {
-  margin-bottom: 20px;
+  margin-bottom: 2%;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 20%;
 }
 .instrument-config {
-  display: inline-flex;
-  gap: 10px;
+  display: flex;
+  gap: 4%;
+  width: 40%;
+}
+
+.record-config {
+  height: 100%;
+  width: 25%;
 }

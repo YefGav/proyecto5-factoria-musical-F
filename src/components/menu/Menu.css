@@ -1,36 +1,19 @@
 .menu-container {
-  height: 350px;
-  width: 350px;
-  border-radius: 12px;
-}
-
-.init-app {
-  width: 150px;
-  height: 185px;
+    height: auto;
+    width: 28%;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
 }
 
 .img-logo {
-  width: 300px;
-  height: 170px;
-  margin-left: 25px;
-  margin-top: 5px;
+    height: 67%;
+    width: 100%;
 }
 
-.btn-play {
-  width: 100px;
-  border-radius: 12px;
-  padding: 20px;
-  font-size: 15px;
-  margin: 20px;
-  margin-left: 125px;
-  box-shadow: #320b9e;
-}
-
-.btn-recording {
-  width: 100px;
-  border-radius: 12px;
-  padding: 8px;
-  font-size: 18px;
-  margin-left: 125px;
-  background-color: rgb(235, 230, 230);
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 }

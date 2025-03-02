@@ -1,0 +1,16 @@
+.score-modal {
+    height: 100%;
+}
+
+.score {
+    height: 90%;
+    margin-top: 1%;
+}
+
+.score-img {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-self: flex-end;
+    padding: 1.5%;
+}

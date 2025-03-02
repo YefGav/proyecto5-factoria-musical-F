@@ -1,0 +1,12 @@
+.level-button {
+    padding: 25px;
+    border-radius: 10px;
+    border: none;
+    width: 25%;
+    font-size: 15px;
+    background-color: rgba(75, 159, 255, 0.74);
+}
+
+.level-button:hover {
+    background-color: rgba(30, 135, 255, 0.74);
+}

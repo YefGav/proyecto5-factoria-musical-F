@@ -12,7 +12,7 @@ export const Score = () => {
                 <img className="back-arrow-img" src='/img/icons/back-arrow.png' alt='Back Arrow' />
             </button>
             <div className="score">
-                <img src={selectedSong.scoreSrc} alt={selectedSong.title} />
+                <img className="score-img" src={selectedSong.scoreSrc} alt={selectedSong.title} />
             </div>
         </div>
     )
