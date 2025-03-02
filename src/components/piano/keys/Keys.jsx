@@ -66,7 +66,7 @@ export const Keys = () => {
             key={tile.key}
             className={tile.type === 'white' ? 'white-key' : 'black-key'}
             style={
-              tile.type === 'black' ? { left: `${tile.position * 52}px` } : {}
+              tile.type === 'black' ? { left: `${tile.position * 7.15}%` } : {}
             }
             onClick={() => handleClick(tile.sound, tile.src)}
           >

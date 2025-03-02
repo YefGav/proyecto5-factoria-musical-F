@@ -3,7 +3,7 @@ import { useModal } from '../ModalContext'
 import { useEffect, useState } from 'react'
 
 export const Recordings = ({ isOpen }) => {
-  const { closeModal } = useModal()
+  const { openModal } = useModal()
   const [recordings, setRecordings] = useState([])
   const [currentRecording, setCurrentRecording] = useState(null)
   const [isPlaying, setIsplaying] = useState(false)
@@ -82,7 +82,7 @@ export const Recordings = ({ isOpen }) => {
 
   return (
     <div className="recordings">
-      <button className="close-button" onClick={closeModal}>
+      <button className="close-button" onClick={() => openModal("welcome")}>
         <img
           className="close-img"
           src="/img/icons/close_icon.png"
