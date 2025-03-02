@@ -1,0 +1,16 @@
+.song {
+margin: 0;
+padding: 0;
+width: 25%;
+cursor: pointer;
+align-self: flex-start;
+}
+
+.song-img {
+    width: 90%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.song-img:hover {
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0);
+}

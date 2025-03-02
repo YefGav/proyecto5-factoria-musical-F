@@ -8,11 +8,11 @@ export const InstrumentButton = (props) => {
     const { setInstrument } = useContext(InstrumentContext);
 
     const handleClick = () => {
-        if(props.instrument === "Piano") {
+        if(props.instrument === "PIANO") {
             setInstrument(new Instrument("/sounds/piano", "wav").getInstrumentKeys());
-        } else if (props.instrument === "Órgano") {
+        } else if (props.instrument === "ÓRGANO") {
             setInstrument(new Instrument("/sounds/church_organ").getInstrumentKeys());
-        } else if (props.instrument === "Teclado eléctrico") {
+        } else if (props.instrument === "TECLADO ELÉCTRICO") {
             setInstrument(new Instrument("/sounds/electric_piano").getInstrumentKeys());
         }
     }
