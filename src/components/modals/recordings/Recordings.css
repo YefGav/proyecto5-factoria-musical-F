@@ -33,6 +33,14 @@
     overflow-y: auto;
     overflow-x: hidden;
     gap: 10px;
+    -webkit-mask: linear-gradient(
+        180deg,
+        transparent,
+        white 1%,
+        white 99%,
+        transparent
+    );
+    mask: linear-gradient(180deg, trasparent, white 1%, white 99%, transparent);
 }
 
 .record {
