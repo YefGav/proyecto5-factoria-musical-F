@@ -1,4 +1,3 @@
-import './ModalContainer.css';
 import { Level } from "../../modals/level/Level";
 import { Songs } from "../../modals/songs/Songs";
 import { Score } from "../../modals/score/Score";
