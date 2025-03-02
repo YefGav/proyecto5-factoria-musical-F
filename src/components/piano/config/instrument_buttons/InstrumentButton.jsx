@@ -1,7 +1,8 @@
 import './InstrumentButton.css';
-import { Instrument } from '../../keys/instrument'; 
+import { Instrument } from '../../keys/instrument';
 import { useContext } from 'react';
 import { InstrumentContext } from '../../Piano';
+import PropTypes from 'prop-types';
 
 export const InstrumentButton = (props) => {
     const { setInstrument } = useContext(InstrumentContext);
@@ -18,5 +19,11 @@ export const InstrumentButton = (props) => {
 
     return (
         <button className="ins_button" onClick={handleClick}>{props.instrument}</button>
-    )
-}
+    );
+};
+
+InstrumentButton.propTypes = {
+    instrument: PropTypes.string.isRequired,
+};
+
+export default InstrumentButton;

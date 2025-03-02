@@ -29,7 +29,6 @@
   box-shadow: inset 1px -6px 25px rgba(0, 0, 0, 0.5);
 }
 
-
 .black-key {
   width: 3.7%;
   height: 55%;
@@ -43,9 +42,9 @@
   line-height: 25vh;
   font-weight: bold;
   cursor: pointer;
-  position: absolute; 
+  position: absolute;
   pointer-events: auto;
-  transform: translateX(-50%); 
+  transform: translateX(-50%);
 }
 
 .black-key:active {

@@ -4,8 +4,8 @@ import { useModal } from '../ModalContext';
 
 export const Level = () => {
 
-    const goBackModal = useModal();
-    
+    const {goBackModal} = useModal();
+
     const easySongs = [
         {id: 1, imgSrc: "/img/songs/estrellita-caratula.jpg", title: "Estrellita donde estás", scoreSrc:"/img/songs/estrellita.png"},
         {id: 2, imgSrc: "/img/songs/himno-de-la-alegria-caratula.jpg", title: "Himno de la alegría", scoreSrc:"/img/songs/himno-de-la-alegria.png"},
@@ -29,7 +29,7 @@ export const Level = () => {
         {id: 4, imgSrc: "/img/songs/wrecking-ball-caratula.jpg", title: "Wrecking Ball", scoreSrc:"/img/songs/wrecking-ball.png"},
         {id: 5, imgSrc: "/img/songs/tu-cancion.jpg", title: "Crea tu canción", scoreSrc:"/img/songs/partitura.png"},
     ];
-    
+
     return (
         <div className='level-modal'>
             <button className="back-arrow" onClick={goBackModal}>
