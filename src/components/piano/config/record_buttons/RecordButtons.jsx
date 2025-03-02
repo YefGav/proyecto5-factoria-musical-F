@@ -5,7 +5,7 @@ import { InstrumentContext } from '../../Piano'
 import { useModal } from '../../../modals/ModalContext'
 
 export const RecordButtons = () => {
-  const { destination } = useContext(InstrumentContext)
+  const { destination, instrumentConfig } = useContext(InstrumentContext)
   const [recording, setRecording] = useState(false)
   const [recorder, setRecord] = useState(null)
   const { requestTitle } = useModal()
@@ -37,7 +37,7 @@ export const RecordButtons = () => {
           audioData: blob64,
           title: title,
           duration: recordDuration,
-          pianoConfiguration: 'piano',
+          pianoConfiguration: instrumentConfig,
         }),
       })
         .then((response) => response.json())

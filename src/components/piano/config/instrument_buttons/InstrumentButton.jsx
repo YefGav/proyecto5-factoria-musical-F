@@ -5,15 +5,18 @@ import { InstrumentContext } from '../../Piano';
 import PropTypes from 'prop-types';
 
 export const InstrumentButton = (props) => {
-    const { setInstrument } = useContext(InstrumentContext);
+    const { setInstrument, setInstrumentConfig } = useContext(InstrumentContext);
 
     const handleClick = () => {
         if(props.instrument === "PIANO") {
             setInstrument(new Instrument("/sounds/piano", "wav").getInstrumentKeys());
+            setInstrumentConfig(props.instrument)
         } else if (props.instrument === "ÓRGANO") {
             setInstrument(new Instrument("/sounds/church_organ").getInstrumentKeys());
+            setInstrumentConfig(props.instrument)
         } else if (props.instrument === "TECLADO ELÉCTRICO") {
             setInstrument(new Instrument("/sounds/electric_piano").getInstrumentKeys());
+            setInstrumentConfig(props.instrument)
         }
     }
 

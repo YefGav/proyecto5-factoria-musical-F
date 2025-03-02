@@ -125,7 +125,7 @@ export const Recordings = ({ isOpen }) => {
                   </button>
                 </div>
                 <p>{r.title}</p>
-                <p>Instrumento</p>
+                <p>{r.pianoConfiguration.charAt(0).toUpperCase() + r.pianoConfiguration.slice(1).toLowerCase()}</p>
                 <p>{r.recordingDate}</p>
                 <p>{r.duration}</p>
                 <button className="icon-btn">
