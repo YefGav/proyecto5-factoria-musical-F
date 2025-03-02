@@ -30,7 +30,7 @@ export const RequestTitleModal = ({isOpen}) => {
         >
             <label htmlFor="title-inpt">Dale un título a tu proyecto</label>
             <input type="text" id="title-inpt" ref={modalRef} value={title} onChange={(e) => setTitle(e.target.value)} />
-            <input type="submit" value="Save" />
+            <input type="submit" value="Save"  className= "save" />
         </form>
     )
 }

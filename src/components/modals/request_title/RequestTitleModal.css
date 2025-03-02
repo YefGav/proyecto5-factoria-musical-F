@@ -1,0 +1,27 @@
+.title {
+    display: flex;
+    gap: 10px;
+    border: 1.5px solid rgba(10, 46, 87, 0.74);
+    border-radius: 10px;
+    width: fit-content;
+    padding: 3%;
+    box-shadow: 0 0 5px black;
+}
+
+label {
+    font-size: 1rem;
+}
+
+#title-inpt {
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.save {
+    border: 0.5px solid rgba(10, 46, 87, 0.74);
+    background-color: rgba(30, 135, 255, 0.74);
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0 0 2px black;
+}
