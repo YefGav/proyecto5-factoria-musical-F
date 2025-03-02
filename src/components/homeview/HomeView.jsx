@@ -1,6 +1,6 @@
 import "./HomeView.css";
 import { ModalProvider } from "../modals/ModalContext";
-import { ModalContainer } from './modal_container/ModalContainer';
+import { ModalContainer } from '../homeview/modal_container/ModalContainer';
 import { Menu } from "../menu/Menu";
 import { Piano } from "../piano/Piano";
 
@@ -14,7 +14,7 @@ export const HomeView = () => {
             <ModalContainer />
         </div>
         <div className="inf-container">
-            <Piano />  
+            <Piano />
         </div>
         </ModalProvider>
         </>
