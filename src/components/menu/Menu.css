@@ -1,0 +1,19 @@
+.menu-container {
+    height: auto;
+    width: 28%;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-logo {
+    height: 67%;
+    width: 100%;
+}
+
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}

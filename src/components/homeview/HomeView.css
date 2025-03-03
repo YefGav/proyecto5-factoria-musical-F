@@ -1,0 +1,15 @@
+.sup-container {
+    width: 100%;
+    height: 50%;
+    font-size: 1px;
+    border-radius: 10px;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+.inf-container {
+    display: flex;
+    justify-content: center;
+    height: 45%;
+}

@@ -1,0 +1,126 @@
+.recordings {
+    background-color: transparent;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 3%;
+}
+
+.close-button {
+    height: 8%;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: none;
+    position: relative;
+    left: 47%;
+    top: 5%;
+    padding: 0;
+}
+
+.close-button:focus {
+    box-shadow: none;
+    border: none;
+}
+
+.close-img {
+    height: 100%;
+}
+
+.recordings-list {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    gap: 10px;
+    -webkit-mask: linear-gradient(
+        180deg,
+        transparent,
+        white 1%,
+        white 99%,
+        transparent
+    );
+    mask: linear-gradient(180deg, trasparent, white 1%, white 99%, transparent);
+}
+
+.record {
+    background-color: white;
+    display: inline-flex;
+    width: 97%;
+    height: 20%;
+    margin: 0;
+    padding: 1%;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 4px 3px 8px rgb(0, 0, 0);
+    text-wrap: nowrap;
+}
+
+.record > p {
+    width: 17ch;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: black;
+    font-size: 1rem;
+}
+
+.record-title{
+    text-align: start;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 95%;
+    width: fit-content;
+}
+.icon-btn {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: none;
+    border:none;
+    padding: 0;
+}
+
+.icon-btn:focus {
+    box-shadow: none;
+    border: none;
+}
+
+.img-btn {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-play {
+    padding-top: 3px;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-delete {
+    height: 85%;
+    justify-content: center;
+    align-items: center;
+}
+
+.recordings-list::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+.recordings-list::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: #000000 0.5px solid;
+    border-radius: 5px;
+}
+
+.recordings-list::-webkit-scrollbar-track {
+    background: linear-gradient(135deg, #0000FF, #8A2BE2);
+    border-radius: 5px;
+}
